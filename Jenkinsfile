@@ -17,12 +17,15 @@ pipeline {
             }
         }
           stage('test') {
+              steps{
+
           try{
           sh './node_modules/.bin/nightwatch -e chrome,edge tests'
           }
           catch (err){
           echo err
           }  
+              }
    }
    stage('end') {  
      echo "Success" 
