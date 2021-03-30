@@ -1,0 +1,21 @@
+{
+  "name": "MERN-App",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "front": "cd front-end && npm start",
+    "back": "cd back-end && nodemon server.js",
+    "dev": "concurrently \"npm run back\" \"npm run front\" "
+  },
+  "keywords": [],
+  "author": "Hannachi Mehdi",
+  "license": "ISC",
+  "dependencies": {
+    "concurrently": "^6.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  }
+}
