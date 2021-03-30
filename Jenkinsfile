@@ -16,11 +16,17 @@ pipeline {
                 sh 'npm install'
             }
         }
-         stage('Test') {
-            steps {
-                sh 'npm run dev'
-            }
-        }
+          stage('test') {
+          try{
+          sh './node_modules/.bin/nightwatch -e chrome,edge tests'
+          }
+          catch (err){
+          echo err
+          }  
+   }
+   stage('end') {  
+     echo "Success" 
+     }
        
     }
 }
