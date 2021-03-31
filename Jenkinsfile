@@ -17,11 +17,9 @@ pipeline {
             }
         }
          stage('test') {
-             environment {
-        scannerHome = tool 'SonarQubeScanner'
-    }
+         
                            steps {
-            sh "${scannerHome}/bin/sonar-scanner"                           }
+            sh "/bin/sonar-scanner"                           }
                            }        
         
        
