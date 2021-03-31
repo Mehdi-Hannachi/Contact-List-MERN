@@ -17,9 +17,10 @@ pipeline {
             }
         }
          stage('Test') {
-      steps {
-         sh 'npm test'
-      }
+       steps {
+                sh 'make check'
+                junit 'reports/**/*.xml' 
+            }
     }        
         
        
