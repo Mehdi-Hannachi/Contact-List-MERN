@@ -18,7 +18,7 @@ pipeline {
         }
        stage('Test') { 
             steps {
-                sh './test.sh' 
+                sh 'sudo ./test.sh' 
             }
         }       
         
