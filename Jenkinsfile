@@ -16,11 +16,11 @@ pipeline {
                 sh 'npm install'
             }
         }
-         stage('est') {
+         stage('test') {
                            steps {
                                 echo "Running the test..."
                            }
-                           }
+                           }        
         
        
     }
