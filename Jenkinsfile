@@ -16,12 +16,11 @@ pipeline {
                 sh 'npm install'
             }
         }
-         stage('Test') {
-       steps {
-                sh 'make check'
-                junit 'reports/**/*.xml' 
+       stage('Test') { 
+            steps {
+                sh './test.sh' 
             }
-    }        
+        }       
         
        
     }
