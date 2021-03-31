@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "cross-env CI=true react-scripts test --env=jsdom",
+    "test": "echo \"Error: no test specified\" && exit 1",
     "front": "cd front-end && npm start",
     "back": "cd back-end && nodemon server.js",
     "dev": "concurrently \"npm run back\" \"npm run front\" "
