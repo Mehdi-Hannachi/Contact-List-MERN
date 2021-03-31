@@ -16,11 +16,11 @@ pipeline {
                 sh 'npm install'
             }
         }
-         stage('test') {
-         
-                           steps {
-            sh "/bin/sonar-scanner"                           }
-                           }        
+         stage('Test') {
+      steps {
+         sh 'npm test'
+      }
+    }        
         
        
     }
