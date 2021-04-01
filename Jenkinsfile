@@ -18,7 +18,7 @@ pipeline {
         }
        stage('Test') { 
             steps {
-                sh 'front-end/test.sh' 
+                sh 'npm test' 
             }
         }       
         
