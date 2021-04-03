@@ -20,17 +20,19 @@ pipeline {
                 sh('cd back-end && npm install')
             }
         }
+
+         stage('Test') { 
+            steps {
+                sh 'cd front-end && npm run test' 
+            }
+        } 
          stage('Build') { 
             steps {
                 sh 'cd front-end && npm run build' 
             }
         }       
         
-       stage('Test') { 
-            steps {
-                sh 'cd front-end && npm run test' 
-            }
-        }       
+            
         
        
     }
