@@ -13,7 +13,9 @@
   "author": "Hannachi Mehdi",
   "license": "ISC",
   "dependencies": {
-    "concurrently": "^6.0.0"
+    "concurrently": "^6.0.0",
+    "global": "^4.4.0",
+    "serve": "^11.3.2"
   },
   "devDependencies": {
     "nodemon": "^2.0.7"

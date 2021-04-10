@@ -8,10 +8,8 @@ pipeline {
     }
      environment {
         CI = 'true'
-        HOME = '.'
-
-    }
-
+       HOME = '.'
+}
     stages {
         stage('Install') {
             steps {
@@ -20,16 +18,17 @@ pipeline {
                 sh('cd back-end && npm install')
             }
         }
-
+        
+        stage('Test') { 
+            steps {
+                sh 'cd front-end && npm run test' 
+            }
+        } 
         
          stage('Build') { 
             steps {
                 sh 'cd front-end && npm run build' 
             }
-        }       
-        
-            
-        
-       
+        }            
     }
 }
